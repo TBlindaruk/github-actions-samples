@@ -8,4 +8,4 @@ namespace: hello-gitops
 images:
 - name: hello-gitops
   newName: taniablindaruk/hello-gitops
-  newTag: 25dabec08ec9a0f792eaafe5354f4b18686d5cff
+  newTag: 537448e3341ab23f9deff103ec659c2b7ed4dcb5
