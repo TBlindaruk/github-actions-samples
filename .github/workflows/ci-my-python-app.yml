@@ -130,14 +130,18 @@ jobs:
           kustomize edit set image hello-gitops=$DOCKER_USERNAME/hello-gitops:$GITHUB_SHA
           cat kustomization.yaml
 
+      - name: install ingress
+        run: |
+          kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/static/provider/cloud/deploy.yaml
+
       - name: Deploy updated Kubernetes resources
         run: |
           kubectl apply -k k8s/ 
 
-      # DO SOME CHECKS HERE BEFORE COMMIT
-      - name: Deploy updated Kubernetes resources
-        run: |
-          kubectl apply -k k8s/
+#      # DO SOME CHECKS HERE BEFORE COMMIT
+#      - name: Deploy updated Kubernetes resources
+#        run: |
+#          kubectl apply -k k8s/
 
       # REMOVE OLD DEPLOYMENT!!
       - name: Remove old namespace
