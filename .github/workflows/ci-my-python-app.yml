@@ -86,7 +86,8 @@ jobs:
       - name: Authenticate to Google Cloud
         uses: 'google-github-actions/auth@v2'
         with:
-          credentials_json: '${{ secrets.GCP_CREDENTIALS }}'
+          service_account: 283967629437-compute@developer.gserviceaccount.com
+          project_id: dhv-dev-ops
 
       - name: Set up Cloud SDK
         uses: google-github-actions/setup-gcloud@v2
