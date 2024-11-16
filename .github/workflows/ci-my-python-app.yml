@@ -86,7 +86,7 @@ jobs:
       - name: Authenticate to Google Cloud
         uses: 'google-github-actions/auth@v0'
         with:
-          credentials_json: '${{ secrets.GCP_CREDENTIALS }}' AIzaSyCi4GQ78Ngr1fXDHvu0Gbn6wTLy1rgKO2Q
+          credentials_json: '${{ secrets.GCP_CREDENTIALS }}'
 
       - name: Set up Cloud SDK
         uses: google-github-actions/setup-gcloud@v0
