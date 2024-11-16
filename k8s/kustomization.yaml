@@ -8,4 +8,4 @@ namespace: python-app-blue
 images:
 - name: hello-gitops
   newName: taniablindaruk/hello-gitops
-  newTag: fae686a5b0bfa479d01823712758424b526a7139
+  newTag: c74305375dc9927f35f7e52fc733e1a6168bb508
